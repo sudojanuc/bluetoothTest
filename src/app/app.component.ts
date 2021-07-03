@@ -7,7 +7,7 @@ import { BluetoothService } from './bluetooth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bluetoothTest';
+  public values: any = [];
 
   constructor(private bluetoothService : BluetoothService){
      
@@ -22,7 +22,7 @@ export class AppComponent {
 
   connect() {
      this.bluetoothService.value()
-    .subscribe(console.log);
+    .subscribe( v => this.values.push(v));
     // navigator.bluetooth.requestDevice(
     //   {
     //   filters: [
