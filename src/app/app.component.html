@@ -1,7 +1,11 @@
-Test bluetooth connection:
-<button (click)=connect()>connect</button>
+<div class="wrapper">
+    <div>Test bluetooth connection:</div>
+    <div>
+        <button (click)=connect()>connect</button>
+    </div>
 
-data:
-<div *ngFor="let value of values">
-    <div>JSON: {{value | json}} </div>
+    <div>data:</div>
+    <div *ngFor="let value of values">
+        <div>JSON: {{value | json}} </div>
+    </div>
 </div>
